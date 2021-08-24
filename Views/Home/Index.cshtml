@@ -1,0 +1,41 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+@using Média_Aluno_MVC.Models
+@model List<Aluno>
+
+<div class="text-center">
+    <h2>Lista de Alunos</h2>
+
+
+    @if (Model.Count > 0)
+    {
+        <table>
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Código</th>
+                    <th>Curso</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                @foreach (Aluno aluno in Model)
+                {
+                    <tr>
+                        <td>@aluno.nome</td>
+                        <td>@aluno.codigo</td>
+                        <td>@aluno.curso</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+
+    }
+    else
+    {
+        <h3>Nenhum aluno cadastrado!</h3>
+    }
+
+
+</div>

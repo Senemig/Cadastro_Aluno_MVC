@@ -1,0 +1,21 @@
+@using Média_Aluno_MVC.Models
+@model Aluno
+
+<form asp-action="CadastrarAluno" method="POST">
+    <p>
+        <label asp-for="nome">Nome do Aluno</label>
+        <input asp-for="nome" required>
+    </p>
+
+    <p>
+        <label asp-for="codigo">Código do Aluno</label>
+        <input asp-for="codigo" required>
+    </p>
+
+    <p>
+        <label asp-for="curso">Curso do Aluno</label>
+        <input asp-for="curso" required>
+    </p>
+
+    <input type="submit" value="Cadastrar">
+</form>
